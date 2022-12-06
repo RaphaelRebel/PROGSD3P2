@@ -76,3 +76,7 @@ $aanbieding = array_merge($onlyconsonants2, $productie, $ondertekening);
  * Opdracht 5:
  * Toon de inhoud van de nieuwe array $aanbieding
  */
+
+echo '<pre>';
+var_dump($aanbieding);
+echo '</pre>';
