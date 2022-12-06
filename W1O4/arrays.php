@@ -46,7 +46,7 @@ echo '<pre>';
 var_dump($onlyconsonants2);
 echo '</pre>';
 
-echo($aanhef["persoon"]);
+
 
 
 
@@ -56,11 +56,20 @@ echo($aanhef["persoon"]);
  * Gebruik hiervoor de methode str_replace().
  */
 
+ $product = "[[product]]";
+ $echtProduct = "chocolade";
+ $productie = str_replace($product, $echtProduct, $korting);
+ 
+ echo '<pre>';
+var_dump($productie);
+echo '</pre>';
 /*
  * Opdracht 4:
  * Voeg nu alle arrays samen in een nieuwe array die je $aanbieding noemt.
  * Gebruik hiervoor de methode array_merge()
  */
+
+         
 
 /*
  * Opdracht 5:
