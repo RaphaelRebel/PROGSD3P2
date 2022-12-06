@@ -8,7 +8,8 @@
 
 <h2>String methodes</h2>
 <form action="" method="post">
-    <label for="naam">Naam:</label><br>
+<script>alert('Niet beveiligd tegen script-injections')</script>
+    <label for="naam">Naam: </label><br>
     <input type="text" name="naam" required placeholder="Naam"><br><br>
 
     <label for="straat">Straat:</label><br>
@@ -36,17 +37,19 @@ if (isset($_POST['submit'])) {
      * <script>alert('Niet beveiligd tegen script-injections')</script>
      */
 
+    
+
     /*
      * OPDRACHT 2:
      * Zorg ervoor dat er geen scripts meer ingevoerd kunnen worden.
      * Hiervoor gebruik je de functie htmlspecialchars().
      * Pas elke ingevoerde variabele waarde aan met de functie htmlspecialchars().
      */
-    $naam = $_POST['naam'];
-    $straat = $_POST['straat'];
-    $huisnummer = $_POST['huisnummer'];
-    $postcode = $_POST['postcode'];
-    $woonplaats = $_POST['woonplaats'];
+    $naam = htmlspecialchars($_POST['naam']);
+    $straat = htmlspecialchars($_POST['straat']);
+    $huisnummer = htmlspecialchars($_POST['huisnummer']);
+    $postcode = htmlspecialchars($_POST['postcode']);
+    $woonplaats = htmlspecialchars($_POST['woonplaats']);
 
     /*
      * OPDRACHT 3:
@@ -58,11 +61,11 @@ if (isset($_POST['submit'])) {
      * Hiervoor gebruik je de functie strtolower()
      */
     echo
-        $naam, '<br>',
-        $straat, '<br>',
-        $huisnummer, '<br>',
-        $postcode, '<br>',
-        $woonplaats, '<br>';
+    ucfirst($naam), '<br>',
+    ucfirst($straat), '<br>',
+    is_numeric(strtolower($huisnummer)), '<br>',
+    strtolower($postcode), '<br>',
+    ucfirst($woonplaats), '<br>';
 
     /*
      * OPDRACHT 5:
