@@ -3,15 +3,20 @@
 $aanhef = array(
     "aanhef" => "Beste",
     "persoon" => "");
-    var_dump($aanhef);
-    echo('<br>');
+    
+    echo '<pre>';
+var_dump($aanhef);
+echo '</pre>';
+
 
 $korting = array(
     "product" => "U heeft in de voorgaande bestelling voor [[product]] gekozen",
     "korting" => "Bij Uw volgende bestelling kunnen we U een korting van 10% aanbieden op hetzelfde product"
 );
+echo '<pre>';
 var_dump($korting);
-echo('<br>');
+echo '</pre>';
+
 
 $ondertekening = array(
   "groet" => "Met vriendelijke groet,",
@@ -19,8 +24,9 @@ $ondertekening = array(
   "functie" => "Directeur Webshop beheer"
 );
 
-print_r($ondertekening);
-echo('<br>');
+echo '<pre>';
+var_dump($ondertekening);
+echo '</pre>';
 
 /*
  * Opdracht 1:
@@ -33,6 +39,14 @@ echo('<br>');
  * Vervang de waarde van persoon, in de array aanhef naar 'klant'
  * Vervang de waarde van naam, in de array ondertekening naar 'jouw naam'
  */
+$klant = 'klant';
+str_replace( $aanhef, $klant, "");
+echo '<pre>';
+var_dump($aanhef);
+echo '</pre>';
+
+
+
 
 /*
  * Opdracht 3:
