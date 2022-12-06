@@ -69,7 +69,8 @@ echo '</pre>';
  * Gebruik hiervoor de methode array_merge()
  */
 
-         
+$aanbieding = array_merge($onlyconsonants2, $productie, $ondertekening);
+
 
 /*
  * Opdracht 5:
