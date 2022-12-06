@@ -2,7 +2,8 @@
 
 $aanhef = array(
     "aanhef" => "Beste",
-    "persoon" => "");
+    "persoon" => " "
+ );
     
     echo '<pre>';
 var_dump($aanhef);
@@ -40,11 +41,12 @@ echo '</pre>';
  * Vervang de waarde van naam, in de array ondertekening naar 'jouw naam'
  */
 $klant = 'klant';
-str_replace( $aanhef, $klant, "");
+$onlyconsonants2 = str_replace( $aanhef["persoon"], $klant, $aanhef) ;
 echo '<pre>';
-var_dump($aanhef);
+var_dump($onlyconsonants2);
 echo '</pre>';
 
+echo($aanhef["persoon"]);
 
 
 
